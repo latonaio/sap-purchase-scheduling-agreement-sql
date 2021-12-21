@@ -1,0 +1,30 @@
+CREATE TABLE `sap-purchase-scheduling-agreement-header-data`
+(
+  `SchedulingAgreement`                 varchar(10) DEFAULT NULL,
+  `CompanyCode`                         varchar(4) DEFAULT NULL,
+  `PurchasingDocumentCategory`          varchar(1) DEFAULT NULL,
+  `PurchasingDocumentType`              varchar(4) DEFAULT NULL,
+  `CreationDate`                        date DEFAULT NULL,
+  `Language`                            varchar(2) DEFAULT NULL,
+  `PurchasingOrganization`              varchar(4) DEFAULT NULL,
+  `PurchasingGroup`                     varchar(3) DEFAULT NULL,
+  `DocumentCurrency`                    varchar(5) DEFAULT NULL,
+  `IncotermsClassification`             varchar(3) DEFAULT NULL,
+  `PaymentTerms`                        varchar(4) DEFAULT NULL,
+  `NetPaymentDays`                      varchar(3) DEFAULT NULL,
+  `TargetAmount`                        varchar(13) DEFAULT NULL,
+  `ExchangeRate`                        varchar(12) DEFAULT NULL,
+  `PurchasingDocumentOrderDate`         date DEFAULT NULL,
+  `Supplier`                            varchar(10) DEFAULT NULL,
+  `SupplierAddressID`                   varchar(10) DEFAULT NULL,
+  `ValidityStartDate`                   date DEFAULT NULL,
+  `ValidityEndDate`                     date DEFAULT NULL,
+  `PurchasingDocumentOrigin`            varchar(1) DEFAULT NULL,
+  `PurchasingDocumentDeletionCode`      varchar(1) DEFAULT NULL,
+  `SupplierRespSalesPersonName`         varchar(30) DEFAULT NULL,
+  `SupplierPhoneNumber`                 varchar(16) DEFAULT NULL,
+  `InvoicingParty`                      varchar(10) DEFAULT NULL,
+  `SchedulingAgreementStatus`           varchar(2) DEFAULT NULL,
+    PRIMARY KEY (`SchedulingAgreement`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4;
