@@ -1,6 +1,6 @@
 CREATE TABLE `sap-purchase-scheduling-agreement-header-partner-data`
 (
-  `SchedulingAgreement`                varchar(10) DEFAULT NULL,
+  `SchedulingAgreement`                varchar(10) NOT NULL,
   `SchedulingAgreementItem`            varchar(5) DEFAULT NULL,
   `PurchasingOrganization`             varchar(4) DEFAULT NULL,
   `SupplierSubrange`                   varchar(6) DEFAULT NULL,

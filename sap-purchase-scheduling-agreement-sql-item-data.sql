@@ -1,7 +1,7 @@
 CREATE TABLE `sap-purchase-scheduling-agreement-item-data`
 (
-  `SchedulingAgreement`                   varchar(10) DEFAULT NULL,
-  `SchedulingAgreementItem`               varchar(5) DEFAULT NULL,
+  `SchedulingAgreement`                   varchar(10) NOT NULL,
+  `SchedulingAgreementItem`               varchar(5) NOT NULL,
   `CompanyCode`                           varchar(4) DEFAULT NULL,
   `PurchasingDocumentCategory`            varchar(1) DEFAULT NULL,
   `PurchasingDocumentItemCategory`        varchar(1) DEFAULT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE `sap-purchase-scheduling-agreement-item-data`
   `InvoiceIsExpected`                     tinyint(1) DEFAULT NULL,
   `InvoiceIsGoodsReceiptBased`            tinyint(1) DEFAULT NULL,
   `EvaldRcptSettlmtIsAllowed`             tinyint(1) DEFAULT NULL,
-    PRIMARY KEY (`SchedulingAgreement`),
+    PRIMARY KEY (`SchedulingAgreement`, `SchedulingAgreementItem`),
     CONSTRAINT `SchedulingAgreement_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap-purchase-scheduling-agreement-header-data` (`SchedulingAgreement`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

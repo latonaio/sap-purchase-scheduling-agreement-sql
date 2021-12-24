@@ -1,6 +1,6 @@
 CREATE TABLE `sap-purchase-scheduling-agreement-header-data`
 (
-  `SchedulingAgreement`                 varchar(10) DEFAULT NULL,
+  `SchedulingAgreement`                 varchar(10) NOT NULL,
   `CompanyCode`                         varchar(4) DEFAULT NULL,
   `PurchasingDocumentCategory`          varchar(1) DEFAULT NULL,
   `PurchasingDocumentType`              varchar(4) DEFAULT NULL,
