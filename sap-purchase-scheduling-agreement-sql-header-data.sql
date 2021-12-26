@@ -1,10 +1,10 @@
-CREATE TABLE `sap-purchase-scheduling-agreement-header-data`
+CREATE TABLE `sap_purchase_scheduling_agreement_header_data`
 (
   `SchedulingAgreement`                 varchar(10) NOT NULL,
   `CompanyCode`                         varchar(4) DEFAULT NULL,
   `PurchasingDocumentCategory`          varchar(1) DEFAULT NULL,
   `PurchasingDocumentType`              varchar(4) DEFAULT NULL,
-  `CreationDate`                        date DEFAULT NULL,
+  `CreationDate`                        varchar(80) DEFAULT NULL,
   `Language`                            varchar(2) DEFAULT NULL,
   `PurchasingOrganization`              varchar(4) DEFAULT NULL,
   `PurchasingGroup`                     varchar(3) DEFAULT NULL,
@@ -14,11 +14,11 @@ CREATE TABLE `sap-purchase-scheduling-agreement-header-data`
   `NetPaymentDays`                      varchar(3) DEFAULT NULL,
   `TargetAmount`                        varchar(13) DEFAULT NULL,
   `ExchangeRate`                        varchar(12) DEFAULT NULL,
-  `PurchasingDocumentOrderDate`         date DEFAULT NULL,
+  `PurchasingDocumentOrderDate`         varchar(80) DEFAULT NULL,
   `Supplier`                            varchar(10) DEFAULT NULL,
   `SupplierAddressID`                   varchar(10) DEFAULT NULL,
-  `ValidityStartDate`                   date DEFAULT NULL,
-  `ValidityEndDate`                     date DEFAULT NULL,
+  `ValidityStartDate`                   varchar(80) DEFAULT NULL,
+  `ValidityEndDate`                     varchar(80) DEFAULT NULL,
   `PurchasingDocumentOrigin`            varchar(1) DEFAULT NULL,
   `PurchasingDocumentDeletionCode`      varchar(1) DEFAULT NULL,
   `SupplierRespSalesPersonName`         varchar(30) DEFAULT NULL,

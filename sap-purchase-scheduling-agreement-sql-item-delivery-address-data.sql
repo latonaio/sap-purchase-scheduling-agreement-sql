@@ -1,4 +1,4 @@
-CREATE TABLE `sap-purchase-scheduling-agreement-item-delivery-address-data`
+CREATE TABLE `sap_purchase_scheduling_agreement_item_delivery_address_data`
 (
   `SchedulingAgreement`                  varchar(10) NOT NULL,
   `SchedulingAgreementItem`              varchar(5) NOT NULL,
@@ -16,6 +16,6 @@ CREATE TABLE `sap-purchase-scheduling-agreement-item-delivery-address-data`
   `PhoneNumber`                          varchar(30) DEFAULT NULL,
   `FaxNumber`                            varchar(30) DEFAULT NULL,
     PRIMARY KEY (`SchedulingAgreement`, `SchedulingAgreementItem`),
-    CONSTRAINT `SchedulingAgreement_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap-purchase-scheduling-agreement-header-data` (`SchedulingAgreement`)
+    CONSTRAINT `SAPSchedulingAgreementItemDeliveryAddressData_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap_purchase_scheduling_agreement_header_data` (`SchedulingAgreement`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

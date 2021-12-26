@@ -1,4 +1,4 @@
-CREATE TABLE `sap-purchase-scheduling-agreement-item-data`
+CREATE TABLE `sap_purchase_scheduling_agreement_item_data`
 (
   `SchedulingAgreement`                   varchar(10) NOT NULL,
   `SchedulingAgreementItem`               varchar(5) NOT NULL,
@@ -17,7 +17,7 @@ CREATE TABLE `sap-purchase-scheduling-agreement-item-data`
   `PurchaseRequisition`                   varchar(10) DEFAULT NULL,
   `PurchaseRequisitionItem`               varchar(5) DEFAULT NULL,
   `SchedAgrmtAgreedCumQty`                varchar(13) DEFAULT NULL,
-  `SchedAgrmtCumQtyReconcileDate`         date DEFAULT NULL,
+  `SchedAgrmtCumQtyReconcileDate`         varchar(80) DEFAULT NULL,
   `AccountAssignmentCategory`             varchar(1) DEFAULT NULL,
   `NetPriceAmount`                        varchar(13) DEFAULT NULL,
   `NetPriceQuantity`                      varchar(5) DEFAULT NULL,
@@ -40,6 +40,6 @@ CREATE TABLE `sap-purchase-scheduling-agreement-item-data`
   `InvoiceIsGoodsReceiptBased`            tinyint(1) DEFAULT NULL,
   `EvaldRcptSettlmtIsAllowed`             tinyint(1) DEFAULT NULL,
     PRIMARY KEY (`SchedulingAgreement`, `SchedulingAgreementItem`),
-    CONSTRAINT `SchedulingAgreement_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap-purchase-scheduling-agreement-header-data` (`SchedulingAgreement`)
+    CONSTRAINT `SAPSchedulingAgreementItemData_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap_purchase_scheduling_agreement_header_data` (`SchedulingAgreement`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;

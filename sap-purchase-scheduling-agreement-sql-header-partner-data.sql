@@ -1,4 +1,4 @@
-CREATE TABLE `sap-purchase-scheduling-agreement-header-partner-data`
+CREATE TABLE `sap_purchase_scheduling_agreement_header_partner_data`
 (
   `SchedulingAgreement`                varchar(10) NOT NULL,
   `SchedulingAgreementItem`            varchar(5) DEFAULT NULL,
@@ -10,6 +10,6 @@ CREATE TABLE `sap-purchase-scheduling-agreement-header-partner-data`
   `Supplier`                           varchar(10) DEFAULT NULL,
   `DefaultPartner`                     tinyint(1) DEFAULT NULL,
     PRIMARY KEY (`SchedulingAgreement`),
-    CONSTRAINT `SchedulingAgreement_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap-purchase-scheduling-agreement-header-data` (`SchedulingAgreement`)
+    CONSTRAINT `SAPSchedulingAgreementHeaderPartnerData_fk` FOREIGN KEY (`SchedulingAgreement`) REFERENCES `sap_purchase_scheduling_agreement_header_data` (`SchedulingAgreement`)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4;
